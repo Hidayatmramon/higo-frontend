@@ -7,7 +7,7 @@ export default function ProgressBar() {
   useEffect(() => {
     const interval = setInterval(async () => {
       try {
-        const res = await axios.get('https://backend.hidayatmramon.me/api/customers/progress');
+        const res = await axios.get('https://backend.hidayatmramon.me:5000/api/customers/progress');
         setProgress(res.data);
       } catch (err) {
         console.error('Gagal ambil progress:', err.message);
