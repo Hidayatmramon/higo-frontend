@@ -18,7 +18,7 @@ export default function UploadForm({ onUploadStart, onUploadComplete }) {
       setProgress(0);
       onUploadStart?.();
 
-      await axios.post('https://backend.hidayatmrmon.me/api/customers/upload', formData, {
+      await axios.post('https://backend.hidayatmramon.me/api/customers/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
         onUploadProgress: (event) => {
           const percent = Math.round((event.loaded * 100) / event.total);
