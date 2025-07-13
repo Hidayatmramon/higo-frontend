@@ -14,7 +14,7 @@ export default function UploadPage() {
 
   const fetchData = async (pageNum = 1, search = searchTerm) => {
     try {
-      const res = await axios.get(`https://backend.hidayatmramon.me:5000/api/customers?page=${pageNum}&limit=100&search=${encodeURIComponent(search)}`);
+      const res = await axios.get(`https://backend.hidayatmramon.me/api/customers?page=${pageNum}&limit=100&search=${encodeURIComponent(search)}`);
       setCustomers(res.data.data);
       setPage(res.data.page);
       setTotalPages(res.data.totalPages);
