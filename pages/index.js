@@ -20,7 +20,7 @@ export default function DashboardPage() {
 
   useEffect(() => {
     axios
-      .get('https://backend.hidayatmramon.me:5000/api/customers/stats')
+      .get('https://backend.hidayatmramon.me/api/customers/stats')
       .then((res) => setStats(res.data))
       .catch((err) => console.error(err));
   }, []);
